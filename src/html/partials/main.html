@@ -1,10 +1,12 @@
 <main>
-  <h1>Adivina el número</h1>
+  <h1 class="title">Adivina el número</h1>
   <section>
     <form class="form js-body">
-      <label for="userNumber" class="subTitle">Introduce aquí tu número</label>
+      <label for="userNumber" class="subTitle"
+        >Introduce aquí tu número:
+      </label>
       <input
-        class="input js-userNumber"
+        class="js-userNumber"
         id="userNumber"
         type="number"
         name="userNumber"
@@ -17,7 +19,7 @@
 
       <label for="pista" class="clue"></label>
       <input
-        class="input js-clue"
+        class="js-clue"
         type="text"
         id="clue"
         value="Pista: Escribe tu número y dale a Prueba"
@@ -26,11 +28,11 @@
 
       <label for="intentos" class="try"></label>
       <input
-        class="input js-counter"
+        class="js-counter"
         type="text"
         id="intentos"
         name="try"
-        value="0"
+        value="Número de intentos: 0"
         readonly
       />
     </form>

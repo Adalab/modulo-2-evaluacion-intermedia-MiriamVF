@@ -1,11 +1,20 @@
 "use strict";
 
-const button = document.querySelector(".js-button");
 const userNumber = document.querySelector(".js-userNumber");
+const button = document.querySelector(".js-button");
 const clue = document.querySelector(".js-clue");
 const tryCount = document.querySelector(".js-counter");
-let counterStart = 0;
 const randomNumber = getRandomNumber(100);
+
+let counterStart = 0;
+
+function counter() {
+  tryCount.value = `Número de intentos: ` + (counterStart += 1);
+}
+
+function getRandomNumber(max) {
+  return Math.ceil(Math.random() * max);
+}
 
 function numberVerification() {
   const number = parseInt(userNumber.value);
@@ -18,14 +27,6 @@ function numberVerification() {
   } else if (number === randomNumber) {
     clue.value = "Has ganado campeona!!!";
   }
-}
-
-function counter() {
-  tryCount.value = `Número de intentos: ` + (counterStart += 1);
-}
-
-function getRandomNumber(max) {
-  return Math.ceil(Math.random() * max);
 }
 
 function clickButtonHandler() {
