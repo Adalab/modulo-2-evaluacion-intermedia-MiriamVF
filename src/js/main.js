@@ -20,12 +20,16 @@ function numberVerification() {
   const number = parseInt(userNumber.value);
   if (number > 100 || number < 1) {
     clue.value = "El número debe estar entre 1 y 100";
+    console.log(`Has seleccionado el número: ${number}`);
   } else if (number < randomNumber) {
     clue.value = "Demasiado bajo";
+    console.log(`Has seleccionado el número: ${number}`);
   } else if (number > randomNumber) {
     clue.value = "Demasiado alto";
+    console.log(`Has seleccionado el número: ${number}`);
   } else if (number === randomNumber) {
     clue.value = "Has ganado campeona!!!";
+    console.log(`Has seleccionado el número: ${number}`);
   }
 }
 

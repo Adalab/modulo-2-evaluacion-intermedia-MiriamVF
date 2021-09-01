@@ -25,24 +25,4 @@ Mi trabajo en este proyecto se centra en la carpeta `src/`, donde se encuentran 
 
 Una vez arrancado el proyecto como hemos comentado, a partir de estos ficheros `src/` se generarán automáticamente `public/` y `docs/`.
 
-La estructura de carpetas que nos ocupan es la siguiente:
-
-```
-src
- ├─ api // los ficheros de esta carpeta se copian en public/api/
- |  └─ data.json
- ├─ images
- |  └─ logo.jpg
- ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
- |  ├─ main.js
- |  └─ events.js
- ├─ scss
- |  ├─ components
- |  ├─ core
- |  ├─ layout
- |  └─ pages
- └─ html
-    └─ partials
-```
-
 ## ⚡ ¡A trastear!
