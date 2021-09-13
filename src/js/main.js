@@ -6,6 +6,9 @@ const clue = document.querySelector(".js-clue");
 const tryCount = document.querySelector(".js-counter");
 const randomNumber = getRandomNumber(100);
 
+// form
+const requestPanel = document.querySelector(".js-form");
+
 let counterStart = 0;
 
 function counter() {
@@ -18,19 +21,22 @@ function getRandomNumber(max) {
 
 function numberVerification() {
   const number = parseInt(userNumber.value);
+  console.log(`Has seleccionado el número: ${number}`);
   if (number > 100 || number < 1) {
-    clue.value = "El número debe estar entre 1 y 100";
-    console.log(`Has seleccionado el número: ${number}`);
+    clue.value = "El número debe estar entre 1 y 100, introduce otro número";
   } else if (number < randomNumber) {
-    clue.value = "Demasiado bajo";
-    console.log(`Has seleccionado el número: ${number}`);
+    clue.value = "Pista: Demasiado bajo";
   } else if (number > randomNumber) {
-    clue.value = "Demasiado alto";
-    console.log(`Has seleccionado el número: ${number}`);
+    clue.value = "Pista: Demasiado alto";
   } else if (number === randomNumber) {
     clue.value = "Has ganado campeona!!!";
-    console.log(`Has seleccionado el número: ${number}`);
   }
+}
+
+// PreventDefault submit form
+
+function handleForm(ev) {
+  ev.preventDefault();
 }
 
 function clickButtonHandler() {
@@ -38,6 +44,7 @@ function clickButtonHandler() {
   counter();
 }
 
+requestPanel.addEventListener("submit", handleForm);
 button.addEventListener("click", clickButtonHandler);
 
 console.log("El número es: " + randomNumber);

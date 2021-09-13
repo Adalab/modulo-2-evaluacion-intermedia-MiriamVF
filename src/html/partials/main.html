@@ -1,7 +1,7 @@
 <main>
   <h1 class="title">Adivina el número</h1>
   <section>
-    <form class="form">
+    <form class="form js-form">
       <label for="userNumber" class="subTitle"
         >Introduce aquí tu número:
       </label>
@@ -19,16 +19,17 @@
 
       <label for="pista" class="clue"></label>
       <input
-        class="js-clue"
+        class="input-disabled js-clue"
         type="text"
         id="clue"
-        value="Pista: Escribe tu número y dale a Prueba"
+        placeholder="Pista: Escribe tu número y dale a Prueba"
         name="clue"
+        readonly
       />
 
       <label for="intentos" class="try"></label>
       <input
-        class="js-counter"
+        class="input-disabled js-counter"
         type="text"
         id="intentos"
         name="try"
